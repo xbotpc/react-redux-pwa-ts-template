@@ -9,7 +9,7 @@ interface ModalProps {
     styleClass?: string,
 }
 
-const Modal = ({ id, children, type = 'hidden', styleClass = '' }: ModalProps) => {
+const Modal = ({ id, children, type = 'hidden', styleClass = '' }: ModalProps): JSX.Element => {
 
     const node = (
         <>

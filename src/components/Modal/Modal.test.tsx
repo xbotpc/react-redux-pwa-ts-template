@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import { MouseEvent } from 'react';
 import Button from '../Button/Button';
 import Modal from './Modal';
 
@@ -24,13 +23,10 @@ describe('Single Modal with text', () => {
 
 describe('Single Modal containing other components', () => {
     let _containerElement: HTMLElement;
-    const onClick = (e: MouseEvent<HTMLButtonElement>) => {
-
-    };
 
     beforeEach(() => {
         const { getByTestId } = render(<Modal id={modalID}>
-            <Button onClick={onClick}>
+            <Button onClick={(e) => { console.log('here', e) }}>
                 ABC
             </Button>
         </Modal>);

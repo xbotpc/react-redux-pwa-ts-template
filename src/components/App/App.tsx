@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import store from '../../state/store';
 
-function App() {
+function App():JSX.Element {
   return (
     <Provider store={store}>
     </Provider>
